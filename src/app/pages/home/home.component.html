@@ -1,0 +1,24 @@
+<div class="container">
+  <div
+    class="col-12 d-flex flex-column justify-items-center align-items-center"
+  >
+    <h1 class="title">Search <span class="subtitle">d_evs</span></h1>
+    <form class="col-12" (ngSubmit)="handleSubmit(search)">
+      <div class="search">
+        <app-input
+          class="col-12 col-md-6"
+          (onSubmit)="handleSearch($event)"
+          (onChange)="setSearch($event)"
+        ></app-input>
+        <button
+          class="search-button col-md-2 d-none d-md-block"
+          (click)="handleSearch(search)"
+        >
+          Search
+        </button>
+      </div>
+    </form>
+
+    <app-alert></app-alert>
+  </div>
+</div>

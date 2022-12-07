@@ -1,0 +1,127 @@
+
+.profile
+  background: #FCFCFC
+  padding-top: 80px
+  color: #4A5568
+
+  @media (max-width: 992px)
+    &
+      .container
+        .row > *
+          padding-right: 0
+          padding-left: 0
+
+  @media (max-width: 992px)
+    &
+      padding-top: 0
+
+  .card
+    background-color: #FFFFFF
+    border-radius: 4px
+    border: none
+    width: 100%
+    min-width: 280px
+    padding: 16px
+    margin-bottom: 40px
+
+    @media (max-width: 992px)
+      &
+        margin-bottom: 0
+
+      &.card-profile
+        background-color: rgba(234, 221, 255, 0.6)
+
+    .icon
+      margin-right: 9px
+      width: 20px
+
+    p
+      font-size: 14px
+      font-weight: 400
+      line-height: 21px
+      letter-spacing: 0em
+      text-align: left
+      margin-bottom: 8px
+
+      &:last-child
+        margin-bottom: 0
+
+    .profile-header
+      display: flex
+      margin-bottom: 16px
+
+      .profile-image
+        width: 100%
+        width: 48px
+        height: 48px
+        border-radius: 64px
+        margin-right: 16px
+
+      .profile-name
+        font-size: 20px
+        font-weight: 700
+        margin-bottom: 4px
+        color: #171923
+
+      .profile-user
+        font-size: 14px
+        font-weight: 400
+        color: #A0AEC0
+
+    .profile-description
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+      margin-bottom: 25px
+
+    .profile-follow
+      margin-bottom: 25px
+
+    .project
+      border-bottom: 1px solid #E2E8F0
+      margin-bottom: 16px
+
+      .project-name
+        font-size: 20px
+        font-weight: 700
+        line-height: 24px
+        letter-spacing: 0em
+        text-align: left
+        margin-bottom: 16px
+        text-transform: capitalize
+
+        a
+          text-decoration: none
+          color: #171923
+
+      .project-description
+        margin-bottom: 16px
+
+      .project-details
+        display: flex
+        margin-bottom: 16px
+
+        .project-stars
+          margin-right: 10px
+
+        .project-date
+          list-style-type: disc
+          list-style-position: inside
+          display: list-item
+
+          &::marker
+            margin-right: 9px
+
+  .profile-contact-button
+    padding: 10px 24px
+    background: #8C19D2
+    border-radius: 6px
+    color: white
+    text-decoration: none
+    width: 100%
+    display: block
+    text-align: center
+    font-style: normal
+    font-weight: 600
+    font-size: 18px
+    line-height: 28px

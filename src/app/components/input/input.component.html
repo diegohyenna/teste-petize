@@ -1,0 +1,14 @@
+<div class="input-group">
+  <span class="input-group-text" id="basic-addon1" (click)="handleSubmit(input)"
+    ><i-feather name="search" class="search-icon"></i-feather
+  ></span>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Search"
+    aria-label="Search"
+    aria-describedby="basic-addon1"
+    [(ngModel)]="input"
+    (change)="handleChange(input)"
+  />
+</div>

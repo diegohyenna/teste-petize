@@ -1,0 +1,127 @@
+<app-alert></app-alert>
+<app-menu (onSubmit)="handleSearch($event)"></app-menu>
+<div class="profile">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="card card-profile">
+          <div class="profile-header">
+            <img class="profile-image" src="{{ profile?.avatar_url }}" />
+            <div>
+              <h3 class="profile-name">{{ this.profile?.name }}</h3>
+              <span class="profile-user">@{{ this.profile?.login }}</span>
+            </div>
+          </div>
+          <div class="profile-follow d-flex d-lg-none gap-3">
+            <p *ngIf="this.profile?.followers">
+              <i-feather name="users" class="icon"></i-feather
+              >{{ this.profile?.followers }} seguidores
+            </p>
+
+            <p *ngIf="this.profile?.following">
+              <i-feather name="heart" class="icon"></i-feather
+              >{{ this.profile?.following }} seguindo
+            </p>
+          </div>
+
+          <p class="profile-description">
+            {{ this.profile?.bio }}
+          </p>
+
+          <div class="profile-follow d-none d-lg-block">
+            <p *ngIf="this.profile?.followers">
+              <i-feather name="users" class="icon"></i-feather
+              >{{ this.profile?.followers }} seguidores
+            </p>
+
+            <p *ngIf="this.profile?.following">
+              <i-feather name="heart" class="icon"></i-feather
+              >{{ this.profile?.following }} seguindo
+            </p>
+          </div>
+
+          <div class="profile-contact d-none d-lg-block">
+            <p *ngIf="this.profile?.company">
+              <i-feather name="award" class="icon"></i-feather
+              >{{ this.profile?.company }}
+            </p>
+            <p *ngIf="this.profile?.location">
+              <i-feather name="map-pin" class="icon"></i-feather
+              >{{ this.profile?.location }}
+            </p>
+            <p *ngIf="this.profile?.email">
+              <i-feather name="mail" class="icon"></i-feather
+              >{{ this.profile?.email }}
+            </p>
+            <p *ngIf="this.profile?.blog">
+              <i-feather name="link" class="icon"></i-feather
+              >{{ this.profile?.blog }}
+            </p>
+            <p *ngIf="this.profile?.twitter_username">
+              <i-feather name="twitter" class="icon"></i-feather>@{{
+                this.profile?.twitter_username
+              }}
+            </p>
+          </div>
+
+          <div class="profile-contact d-flex d-lg-none gap-3">
+            <p *ngIf="this.profile?.company">
+              <i-feather name="award" class="icon"></i-feather
+              >{{ this.profile?.company }}
+            </p>
+            <p *ngIf="this.profile?.location">
+              <i-feather name="map-pin" class="icon"></i-feather
+              >{{ this.profile?.location }}
+            </p>
+            <p *ngIf="this.profile?.email">
+              <i-feather name="mail" class="icon"></i-feather
+              >{{ this.profile?.email }}
+            </p>
+            <p *ngIf="this.profile?.blog">
+              <i-feather name="link" class="icon"></i-feather
+              >{{ this.profile?.blog }}
+            </p>
+            <p *ngIf="this.profile?.twitter_username">
+              <i-feather name="twitter" class="icon"></i-feather>@{{
+                this.profile?.twitter_username
+              }}
+            </p>
+          </div>
+        </div>
+
+        <a
+          class="profile-contact-button d-none d-lg-block"
+          [href]="
+            this.profile?.blog ||
+            'https://twitter.com/' + this.profile?.twitter_username
+          "
+          *ngIf="this.profile?.twitter_username || this.profile?.blog"
+        >
+          Contato
+        </a>
+      </div>
+
+      <div class="col-lg-9 pl-32">
+        <div class="card">
+          <div class="project" *ngFor="let repository of this.repositories">
+            <h3 class="project-name">
+              <a [href]="repository.html_url">{{
+                this.removeCaracter(repository.name, "-")
+              }}</a>
+            </h3>
+            <p class="project-description">{{ repository.description }}</p>
+            <div class="project-details">
+              <p class="project-stars">
+                <i-feather name="star" class="icon"></i-feather
+                >{{ repository.stargazers_count }}
+              </p>
+              <p class="project-date">
+                {{ repository.updated_at | date : "dd/MM/yyyy" }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

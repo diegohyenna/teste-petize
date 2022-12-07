@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg d-none d-lg-flex">
+  <div class="container">
+    <div class="col-lg-3">
+      <h1 class="title">Search <span class="subtitle">d_evs</span></h1>
+    </div>
+    <form (ngSubmit)="handleSubmit(input)">
+      <app-input
+        class="pl-32 col-lg-6 align-items-left"
+        (onSubmit)="handleSearch($event)"
+        (onChange)="handleChange($event)"
+      ></app-input>
+    </form>
+  </div>
+</nav>

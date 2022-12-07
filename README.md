@@ -1,18 +1,24 @@
-# TestePetize
+# Teste Petize
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+Projeto teste para concorrer a vaga de Front-end Junior na [Petize](https://www.petize.com.br)
 
-## Development server
+Esse projeto foi gerado com a [Angular CLI](https://github.com/angular/angular-cli) versão 14.2.3.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias usadas
 
-## Code scaffolding
+- Sass
+  - Para poder usar os super poderes de um pré-processador
+- Bootstrap
+  - Para poder usar grids e para poder usar customização nos inputs e o show/hide de itens de acordo com a resolução de tela
+- Angular Feather Icons
+  - Para poder usar os icones no projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Rodar localmente
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Instale o angular cli `npm install -g @angular/cli`
+- Clone o projeto [Link do projeto no github]('https://github.com/diegohyenna/teste-petize')
+- Abra o terminal e navega até a pasta raiz do projeto no seu computador, execute então: `npm install`
+- Depois execute `ng serve` e abra o navegador em [http://localhost:4200](http://localhost:4200)
 
 ## Running unit tests
 
@@ -22,6 +28,4 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Demonstração

@@ -1,0 +1,47 @@
+
+.container
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  justify-content: center
+  align-items: center
+
+  .title, .subtitle
+    font-family: Nunito
+    font-size: 80px
+    font-weight: 500
+    line-height: 109px
+    letter-spacing: 0.01em
+    text-align: left
+
+  @media (max-width: 768px)
+    .title, .subtitle
+      font-family: Nunito
+      font-size: 50px
+      font-weight: 700
+      line-height: 68px
+
+  .title
+    color: #0069CA
+
+  .subtitle
+    color: #8C19D2
+
+.search
+  display: flex
+  gap: 32px
+  justify-content: center
+  align-content: center
+
+  .search-button
+    text-align: center !important
+    padding: 10px 24px
+    background: #8C19D2
+    border-radius: 6px
+    font-size: 18px
+    font-weight: 600
+    line-height: 28px
+    letter-spacing: 0em
+    text-align: left
+    color: white
+    border: none
