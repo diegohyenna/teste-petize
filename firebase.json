@@ -1,0 +1,6 @@
+{
+  "hosting": {
+    "public": "dist/teste-petize",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

@@ -36,15 +36,15 @@ export class HomeComponent implements OnInit {
               message: 'Não existem usuários com esse nome!',
             });
             return;
+          } else {
+            this.router.navigate([`/profile/${userDetails.data.login}`]);
           }
-          this.router.navigate([`/profile/${userDetails.data.login}`]);
         },
-        (error) => {
+        () => {
           this.alertService.setAlert({
             type: 'danger',
-            message: error?.error?.message
-              ? error.error.message
-              : 'Não existem usuários com esse nome!',
+            message:
+              'O usuário está incorreto ou houve algum erro na pesquisa!',
           });
         }
       );

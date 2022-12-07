@@ -7,7 +7,7 @@ import { AlertService } from 'src/app/services/alert.service';
   templateUrl: './alert.component.html',
   styleUrls: ['./alert.component.sass'],
 })
-export class AlertComponent implements OnInit, OnChanges {
+export class AlertComponent implements OnInit {
   alert!: IAlert;
 
   constructor(private alertService: AlertService) {
@@ -20,8 +20,4 @@ export class AlertComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {}
-
-  ngOnChanges(changes: SimpleChanges): void {
-    // this.alert = this.alertService.getAlert();
-  }
 }
